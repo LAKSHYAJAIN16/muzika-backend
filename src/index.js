@@ -12,7 +12,7 @@ const followRoutes = require("./routes/follow");
 const heartRoutes = require("./routes/heart");
 const commentRoutes = require("./routes/comments");
 const viewRoutes = require("./routes/views");
-const rankingRoutes = require("./routes/ranking");
+const historyRoutes = require("./routes/history");
 
 //Use Cors So That I don't spend 14 days to figure out WRS errors
 app.use(cors());
@@ -22,7 +22,7 @@ app.use(express.json());
 app.use("/", testRoutes);
 app.use("/api/user", authRoutes);
 app.use("/api/songs", songRoutes);
-app.use("/api/rankings", rankingRoutes);
+app.use("/api/graph/history", historyRoutes);
 app.use("/api/graph/users", userRoutes);
 app.use("/api/graph/followers", followRoutes);
 app.use("/api/graph/hearts", heartRoutes);
